@@ -7,6 +7,8 @@ int main(void) {
     printf("Enter a string: ");
     fgets(input_string, sizeof(input_string), stdin);
 
+    input_string[strcspn(input_string, "\n")] = '\0';
+
     int length = strlen(input_string);
 
     for (int i = 0; i < length / 2; i++) {
